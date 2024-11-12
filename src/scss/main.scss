@@ -1,0 +1,934 @@
+$primary-color: #2533CC;
+$secondary-color: #f0f0f0;
+$text-color: #333;
+
+@font-face {
+  font-family: 'DORAN-MEDIUM';
+  src: url('../fonts/DORAN-MEDIUM.woff') format('woff'),
+  // font-weight: normal;
+  // font-style: normal;
+}
+
+body {
+  font-family: 'DORAN-MEDIUM', sans-serif;
+}
+
+.main-header {
+  background-color: white;
+  padding: 10px 0;
+  border-bottom: 2px solid #e0e0e0;
+  color: $text-color;
+  direction: rtl;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+
+  .container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .top {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .menu-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+  }
+
+  .logo img {
+    max-height: 40px;
+    width: auto;
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    align-items: center;
+
+    .login-btn {
+      background-color: $primary-color;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .call-icon {
+      font-size: 1.2rem;
+      color: $primary-color;
+      background-color: $secondary-color;
+      // border-radius: 50%;
+      padding: 4px;
+    }
+
+    .lang {
+      background-color: $secondary-color;
+      border-radius: 4px;
+      color: $primary-color;
+      padding: 6px 12px;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.menu {
+  .menu-list {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .menu-item {
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: $text-color;
+        font-weight: bold;
+        font-size: 0.95rem;
+
+        &:hover {
+          color: $primary-color;
+        }
+
+        i {
+          margin-left: 5px;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+
+.main-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .content {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* این خط، محتوای درون `.content` را به مرکز می‌آورد */
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px; /* تنظیم فاصله بالای محتوای اصلی */
+}
+
+    h1 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      max-width: 400px;
+      margin: 0 auto 20px;
+      margin-top: 20px
+    }
+
+      input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px 0 0 5px;
+        width: 600px;
+      }
+
+      button {
+        padding: 10px;
+        background-color: #0056b3;
+        color: white;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+
+        i {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .extensions-slider .swiper-slide {
+      background-color: #0044cc; /* رنگ پس‌زمینه اسلاید */
+      color: white; /* رنگ متن */
+      border-radius: 10px; /* گوشه‌های گرد */
+      padding: 20px; /* فاصله داخلی */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      text-align: center;
+      min-height: 200px; /* ارتفاع مینیمم اسلاید */
+      width: 100%;
+      box-sizing: border-box;
+  
+    }
+    .extensions-slider .swiper-wrapper {
+      display: flex;
+      flex-wrap: nowrap; /* جلوگیری از شکستن اسلایدها به خطوط جدید */
+      transition: transform 0.3s ease; /* انیمیشن روان و حرکت نرم اسلایدها */
+      width: 100%; /* اندازه کامل */
+      box-sizing: border-box;
+  }
+  
+  .extensions-slider .swiper-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+    
+.swiper-button-next, .swiper-button-prev {
+  color: white;
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* استایل برای دکمه‌های پیمایش اسلایدر */
+.extensions-slider .swiper-button-next,
+.extensions-slider .swiper-button-prev {
+  position: absolute;
+  top: 50%; /* مرکز کردن عمودی دکمه‌ها */
+  transform: translateY(-50%); /* انتقال عمودی به مرکز */
+  background-color: rgba(0, 0, 0, 0.5); /* رنگ پس‌زمینه نیمه‌شفاف */
+  color: white;
+  border-radius: 50%; /* دایره‌ای کردن دکمه‌ها */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.extensions-slider .swiper-button-prev {
+  left: 10px; /* فاصله از سمت چپ */
+}
+
+.extensions-slider .swiper-button-next {
+  right: 10px; /* فاصله از سمت راست */
+}
+
+    .swiper-pagination-bullet {
+      background: #ffffff; /* رنگ سفید برای نقطه‌ها */
+      opacity: 0.7;
+    }
+    .swiper-pagination-bullet-active {
+      background: #00c853; /* رنگ سبز برای نقطه فعال */
+    }
+            
+
+    // .extensions {
+    //   display: flex;
+    //   justify-content: center;
+    //   gap: 10px;
+    //   margin-bottom: 15px;
+
+    //   span {
+    //     font-size: 14px;
+    //     color: #333;
+
+    //     &.hot {
+    //       color: #e63946;
+    //       font-weight: bold;
+    //     }
+    //   }
+    // }
+
+    .promo-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #0056b3;
+      text-decoration: underline;
+    }
+  
+
+  .vector {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+
+.main-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-direction: column;
+  }
+
+  .content {
+    max-width: 600px;
+
+    h1 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 50px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      max-width: 400px;
+      margin: 0 auto 20px;
+
+      input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px 0 0 5px;
+        text-align: center;
+      }
+
+      button {
+        padding: 10px;
+        background-color: #0056b3;
+        color: white;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+
+        i {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .extensions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+
+      span {
+        font-size: 14px;
+        color: #333;
+
+        &.hot {
+          color: #e63946;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .promo-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #0056b3;
+      text-decoration: underline;
+    }
+
+    .promo-link i {
+      margin-left: 5px;
+      /* فاصله بین متن و آیکون */
+    }
+
+  }
+
+  .vector {
+    position: relative;
+    /* برای تنظیم دکمه درون وکتور */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .vector img {
+    width: 100%;
+    /* تصویر به طور کامل درون کانتینر */
+    height: auto;
+    margin-bottom: 40px;
+  }
+
+  .view-button {
+    position: absolute;
+    bottom: 95px;
+    /* فاصله از پایین تنظیم شده */
+    padding: 15px 30px;
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transform: translateX(-50%);
+    left: 50%;
+    /* دکمه را در مرکز افقی قرار می‌دهد */
+  }
+
+  .view-button:hover {
+    background-color: #004494;
+  }
+
+}
+
+
+.services-section {
+  padding: 40px;
+  background-color: #f8f9fa;
+  text-align: center;
+  p{
+    margin-bottom: 110px;
+  }
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 150px;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.service-card h3 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+}
+
+.service-card p {
+  color: #666;
+  font-size: 16px;
+  margin: 10px 0;
+  margin-top: 30px;
+}
+
+.service-card .details {
+  color: #999;
+  font-size: 14px;
+}
+
+.service-card a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.service-card a:hover {
+  background-color: #004494;
+}
+
+.service-card.left,
+.service-card.right {
+  height: 570.8px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.service-card.left a,
+.service-card.right a {
+background-color: #f9f9f9;
+color:#004494
+}
+
+/* استایل برای کارت وسط */
+.service-card.center {
+  height: 665.93px;
+  margin-top: -50px;
+  margin-bottom: -20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.service-card.center h3 {
+  color: #FFA500;
+  /* رنگ نارنجی برای عنوان */
+}
+
+.service-card.center a {
+  background-color: #0056b3;
+  
+  color: white;
+}
+
+.service-card.center a:hover {
+  background-color: #5c5c5d;
+  /* تغییر رنگ دکمه هنگام هاور */
+}
+
+.security-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  text-align: right;
+  display: flex;
+  justify-content: center;
+}
+
+.security-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.security-image img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  margin-right: 70px;
+}
+
+.security-text {
+  max-width: 600px;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 60px;
+}
+
+.security-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.security-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.security-item i {
+  font-size: 1rem;
+  color: #2533CC;
+  margin-right: 10px;
+}
+
+.security-item .item-title {
+  font-size: 16px;
+  color: #333;
+}
+
+
+.extensions-slider {
+  position: relative;
+  max-width: 400px; /* عرض کانتینر اسلایدر */
+  margin: auto;
+  overflow: hidden;
+  width: 100%;
+  height: 250px; /* ارتفاع ثابت برای کانتینر اسلایدر */
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 18px;
+ 
+}
+
+
+.swiper-pagination {
+  bottom: 10px;
+}
+
+.swiper-container {
+  width: 100%;
+  // max-width: 600px; /* اندازه کانتینر را تنظیم کنید */
+ height: 100%;
+  margin: auto;
+}
+
+.operation-center-section {
+  background-image: url('../images/dedicated-server-icon.png'); 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 484px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1920px;
+  max-height: 400px;
+}
+
+.operation-center-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(61, 75, 112, 0.8); /* هاله خاکستری با شفافیت ۵۰ درصد */
+}
+
+
+.operation-center-section .overlay {
+  background-color: rgba(37, 51, 204, 0.8); /* رنگ آبی با شفافیت */
+  padding: 20px 40px;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 1; /* قرار دادن محتوای متنی روی هاله */
+  
+}
+
+.operation-center-section .overlay p {
+  margin: 5px 0;
+  font-size: 1.5rem;
+}
+
+.trust-section {
+  background-color: #f9f9f9;
+  padding: 40px;
+  text-align: center;
+}
+
+.trust-section .container {
+  max-width: 1326px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.stat-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 32px;
+  font-weight: bold;
+  color: #2533CC;
+}
+
+.stat-description {
+  font-size: 14px;
+  color: #333;
+}
+
+.testimonial-section {
+  background-color: #f9f9f9;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.testimonial-slider {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.testimonial-slider .swiper-slide {
+  background-color: #2533CC;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+
+.extensions-slide {
+  background-color: #2533CC;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-content {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.swiper-pagination {
+  bottom: 10px;
+}
+
+
+
+.clients-section {
+  background-color: #f9f9f9;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.clients-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1326px;
+  margin: auto;
+}
+
+.client-logo {
+  width: 150px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.client-logo:hover {
+  transform: scale(1.1);
+}
+
+.load-more-icon {
+  display: block;
+  margin: 20px auto;
+  cursor: pointer;
+  width: 30px;
+  transition: transform 0.3s;
+}
+
+.load-more-icon:hover {
+  transform: scale(1.1);
+}
+
+.footer-section {
+  background-color:#364163  ;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+
+  .container {
+    max-width: 1326px;
+    margin: 0 auto;
+  }
+
+  .footer-contact-info {
+    font-size: 1.2rem;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    direction: rtl;
+
+    .footer-title-section {
+      flex: 1;
+      max-width: 250px;
+    }
+
+    .footer-info {
+      flex: 1;
+      max-width: 800px;
+    }
+
+    .footer-links {
+      flex: 1;
+      max-width: 200px;
+
+      .footer-link-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          color: #ddd;
+          font-size: 0.9rem;
+          margin-bottom: 8px;
+        }
+      }
+    }
+
+    .footer-logo img {
+      width: 80px;
+      height: auto;
+    }
+  }
+
+  .footer-social {
+    .social-icons {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+
+      li {
+        font-size: 1.5rem;
+        color: #ddd;
+      }
+    }
+  }
+
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+
+    li {
+      a {
+        color: #ccc;
+        text-decoration: none;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.footer-copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .copyright-text {
+    font-size: 14px;
+    color: #ccc;
+  }
+  .design-text {
+    font-size: 14px;
+    color: #ccc;
+    text-align: right;
+  }
+
+}
+
+.footer-copylinks {
+  display: flex;
+  
+  p{
+    margin: 20px;
+  }
+}

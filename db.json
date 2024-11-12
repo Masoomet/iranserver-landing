@@ -1,0 +1,10 @@
+{
+  "products": [
+    { "id": 1, "name": "محصول ۱", "price": "10000" },
+    { "id": 2, "name": "محصول ۲", "price": "15000" }
+  ],
+  "customers": [
+    { "id": 1, "name": "مشتری ۱", "feedback": "عالی" },
+    { "id": 2, "name": "مشتری ۲", "feedback": "خوب" }
+  ]
+}
